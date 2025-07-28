@@ -32,7 +32,7 @@ background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-2
 background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-  min-height: 80px;
+  min-height: 40px;
 }
 
 
@@ -45,19 +45,19 @@ background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, F
 }
 
 .logo{
-  margin-top:25px;
-  margin-left:20px;
-  font-size:30px;
+  margin-top:10px;
+  margin-left:10px;
+  font-size:20px;
  color: aliceblue;
 }
 
 #navlinks{
-  margin-top:30px;
+  margin-top:15px;
   margin-right:20px;
   color: rgb(197, 225, 37);
   display: flex;
   gap:50px;
-  font-size:25px;
+  font-size:10px;
 
   
 }
@@ -75,38 +75,156 @@ a:hover{
   background: #00c6ff;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-min-height:40px;
+min-height:20px;
 text-align: center;
 overflow-x: hidden;
+display:flex;
+justify-content: center;
+align-items: center;
+
 }
 
 .footerbox-p{
   color: azure;
-  font-size:20px;
+  font-size:10px;
   text-align: center;
+  
+
+
 }
 
 .contentbox{
-  width: 50%;
+  width: 100%;
   margin: auto;
-  border: 1px solid black;
-  background-color:white;
+  border: 2px solid black;
+  /* background-color:white; */
   display: flex;
-  flex-direction: column;
-  gap: 100px;
-  padding: 40px;
-  box-shadow: 3px 3px 30px black;
+  flex-direction:column;
+  gap:50px;
+  padding: 20px;
+  /* box-shadow: 3px 3px 10px black; */
   background-color:yellow;
 }
 
 .iteam{
   display: flex;
   justify-content: space-around;
+  /* flex-direction: column-reverse; */
   align-items: center;
 }
 
 
 .rightbox img{
+  border-radius: 50px;
+   width: 180px;
+   height: 150px;
+  box-shadow: 3px 18px 30px red ;
+}
+
+.rightbox{
+  position: relative;
+   transition: all 0.6s linear 0s ;
+}
+
+/* .rightbox:hover{
+  transform: scale(1.2);
+
+} */
+.leftbox{
+  display: flex;
+  flex-direction:column;
+  gap: 20px;
+}
+
+.leftbox h2{
+  font-size:20px;
+}
+
+.inbox{
+  font-size: 11px;
+}
+
+.sepbox{
+
+  font-size: 8px;
+}
+
+.rightbox .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(85, 62, 62, 0.8);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  transition: all 0.2s linear 0s  ;
+}
+.rightbox .overlay:hover{
+  opacity: 1;
+}
+
+
+.rightbox .overlay span{
+  color :white;
+  font-size:5px;
+}
+
+.button{
+  display: flex;
+  justify-content: end;
+  align-items:end ;
+  justify-content: space-around;
+
+  /* background-color:blue; */
+
+ 
+}
+
+button{
+  background-color: #a593ef;
+  color:white;
+  width: 60px;
+  height: 25px;
+  font-size: 5px;
+  border-radius: 30px;
+  border: 3px solid  black;
+}
+
+/* button:hover{
+  background-color: #bf4242;
+ box-shadow: 3px 1px  30px 5px green ;
+} */
+
+.rightbox .overlay a{
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: #db0909;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/* .rightbox .overlay a:hover{
+  border: 2px solid rgb(237, 14, 14);
+  background-color:#00c6ff;
+  box-shadow: 2px 2px 30px 10px yellow
+} */
+
+
+
+
+
+
+/* ======== MEDIA QUERY FOR MOBILE DEVICES ======== */
+@media (min-width: 768px) {
+
+  .rightbox img{
   border-radius: 40px;
  
   box-shadow: 3px 18px 30px red ;
@@ -204,4 +322,6 @@ button:hover{
   border: 2px solid rgb(237, 14, 14);
   background-color:#00c6ff;
   box-shadow: 2px 2px 30px 10px yellow
+}
+
 }
